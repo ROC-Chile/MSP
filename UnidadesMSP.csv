@@ -1,0 +1,106 @@
+Sampling.Unit.Name,Latitude,Longitude,SiteName,Ha,Sitio
+COQ14,-29.900063,-71.273762,Bahía de Coquimbo - río Elqui - Desembocadura,6.12,1
+COQ15,-29.897706,-71.271445,Bahía de Coquimbo - río Elqui - Desembocadura,10.73,1
+COQ17,-29.893200,-71.271560,Bahía de Coquimbo - río Elqui - Desembocadura,3.44,1
+COQ18,-29.894617,-71.273527,Bahía de Coquimbo - río Elqui - Desembocadura,1.97,1
+COQ19,-29.888790,-71.273383,Bahía de Coquimbo - río Elqui - Desembocadura,10.04,1
+COQ20,-29.891349,-71.272141,Bahía de Coquimbo - río Elqui - Desembocadura,5.59,1
+COQ21,-29.879741,-71.273860,Bahía de Coquimbo - río Elqui - Desembocadura,11.37,1
+COQ22,-29.870696,-71.274807,Bahía de Coquimbo - río Elqui - Desembocadura,10.84,1
+COQ25,-29.861552,-71.276106,Bahía de Coquimbo - río Elqui - Desembocadura,11.43,1
+COQ26,-29.852536,-71.277323,Bahía de Coquimbo - río Elqui - Desembocadura,14.31,1
+COQ27,-29.843966,-71.279002,Bahía de Coquimbo - río Elqui - Desembocadura,16.71,1
+COQ28,-29.835110,-71.280964,Bahía de Coquimbo - río Elqui - Desembocadura,21.45,1
+COQ29,-29.826664,-71.286013,Bahía de Coquimbo - río Elqui - Desembocadura,13.99,1
+COQ32,-29.821912,-71.288635,Bahía de Coquimbo - río Elqui - Desembocadura,1.99,1
+COQ36,-29.824683,-71.291872,Bahía de Coquimbo - río Elqui - Desembocadura,0.85,1
+CH0,-41.490647,-72.866514,Coihuín y Chamiza,6.24,2
+CHA,-41.497786,-72.858587,Coihuín y Chamiza,69.47,2
+CHA1,-41.491357,-72.863779,Coihuín y Chamiza,7.64,2
+CHA2,-41.492977,-72.862376,Coihuín y Chamiza,6.63,2
+CHA3,-41.494544,-72.861148,Coihuín y Chamiza,6.78,2
+CHA4,-41.496096,-72.859867,Coihuín y Chamiza,6.80,2
+CHA5,-41.497688,-72.858549,Coihuín y Chamiza,7.11,2
+CHA6,-41.499423,-72.857202,Coihuín y Chamiza,7.64,2
+CHA7,-41.501175,-72.855748,Coihuín y Chamiza,8.08,2
+CHA8,-41.503290,-72.854268,Coihuín y Chamiza,9.01,2
+CHA9,-41.504450,-72.851696,Coihuín y Chamiza,9.48,2
+CHARCA1,-31.587044,-71.552364,Huentelauquén,2.20,3
+CHARCA2,-31.576637,-71.557410,Huentelauquén,3.47,3
+HUENTE1,-31.624883,-71.557245,Huentelauquén,3.03,3
+HUENTE2,-31.622319,-71.558399,Huentelauquén,3.16,3
+HUENTE3,-31.619121,-71.561244,Huentelauquén,6.83,3
+HUENTE4,-31.616260,-71.562541,Huentelauquén,10.43,3
+HUENTE5,-31.613084,-71.565049,Huentelauquén,21.25,3
+HUENTE6,-31.609300,-71.570516,Huentelauquén,17.89,3
+HUENTE7,-31.613707,-71.559112,Huentelauquén,11.17,3
+HUENTE8,-31.619204,-71.555608,Huentelauquén,2.33,3
+LLANOS1,-31.585870,-71.562856,Huentelauquén,21.82,3
+LLANOS2,-31.588887,-71.564678,Huentelauquén,17.07,3
+LLANOS3,-31.592099,-71.565919,Huentelauquén,22.77,3
+LLANOS4,-31.595118,-71.566229,Huentelauquén,11.39,3
+ANDALIEN1,-36.744351,-73.018256,Humedal Rocuant - Andalién,10.42,4
+ANDALIEN10,-36.737592,-73.038126,Humedal Rocuant - Andalién,1.04,4
+ANDALIEN11,-36.737224,-73.040624,Humedal Rocuant - Andalién,0.82,4
+ANDALIEN12,-36.736937,-73.043173,Humedal Rocuant - Andalién,0.60,4
+ANDALIEN2,-36.741504,-73.015632,Humedal Rocuant - Andalién,2.26,4
+ANDALIEN3,-36.739144,-73.018669,Humedal Rocuant - Andalién,3.43,4
+ANDALIEN4,-36.738948,-73.022985,Humedal Rocuant - Andalién,1.86,4
+ANDALIEN5,-36.738802,-73.026126,Humedal Rocuant - Andalién,1.35,4
+ANDALIEN6,-36.738644,-73.028761,Humedal Rocuant - Andalién,1.19,4
+ANDALIEN7,-36.738445,-73.031149,Humedal Rocuant - Andalién,0.99,4
+ANDALIEN8,-36.738216,-73.033337,Humedal Rocuant - Andalién,0.93,4
+ANDALIEN9,-36.737937,-73.035612,Humedal Rocuant - Andalién,1.15,4
+ROCUANT1,-36.733894,-73.098869,Humedal Rocuant - Andalién,20.46,4
+ROCUANT2,-36.735974,-73.088536,Humedal Rocuant - Andalién,38.28,4
+ROCUANT3,-36.749251,-73.084274,Humedal Rocuant - Andalién,12.57,4
+RL1,-41.701098,-73.097172,Humedales de Calbuco - Estero Rulo,5.46,5
+RL2,-41.702253,-73.094639,Humedales de Calbuco - Estero Rulo,6.22,5
+RL3,-41.702648,-73.091733,Humedales de Calbuco - Estero Rulo,6.63,5
+RL5,-41.707729,-73.091833,Humedales de Calbuco - Estero Rulo,6.14,5
+RL6,-41.709702,-73.092179,Humedales de Calbuco - Estero Rulo,5.35,5
+HT2,-41.715529,-73.153404,Humedales de Calbuco - Huito,3.54,6
+HT3,-41.713402,-73.152487,Humedales de Calbuco - Huito,3.55,6
+HT4,-41.710741,-73.153072,Humedales de Calbuco - Huito,7.13,6
+CF,-41.794566,-73.207032,Humedales de Calbuco - Pureo,1.74,7
+PU1,-41.789048,-73.217032,Humedales de Calbuco - Pureo,6.43,7
+PU2,-41.784207,-73.210195,Humedales de Calbuco - Pureo,16.9,7
+QH,-41.776825,-73.192468,Humedales de Calbuco - Quihua,19.99,8
+MANTA1,-32.882591,-71.497752,Mantagua,1.31,9
+MANTA10,-32.877974,-71.509992,Mantagua,1.82,9
+MANTA11,-32.876573,-71.508629,Mantagua,0.97,9
+MANTA12,-32.877328,-71.508418,Mantagua,1.05,9
+MANTA13,-32.878111,-71.508279,Mantagua,0.94,9
+MANTA14,-32.879001,-71.508209,Mantagua,1.28,9
+MANTA15,-32.880188,-71.508452,Mantagua,1.55,9
+MANTA2,-32.883119,-71.499744,Mantagua,1.78,9
+MANTA3,-32.882715,-71.501206,Mantagua,2.79,9
+MANTA4,-32.882667,-71.503221,Mantagua,4.68,9
+MANTA5,-32.883614,-71.505558,Mantagua,4.45,9
+MANTA6,-32.883983,-71.507440,Mantagua,2.94,9
+MANTA7,-32.883818,-71.509994,Mantagua,6.14,9
+MANTA8,-32.881717,-71.509864,Mantagua,2.79,9
+MANTA9,-32.879942,-71.509820,Mantagua,2.34,9
+LLUTA1,-18.418425,-70.321363,Río Lluta - Desembocadura,1.90,10
+LLUTA2,-18.416610,-70.322793,Río Lluta - Desembocadura,2.24,10
+LLUTA3,-18.415116,-70.324111,Río Lluta - Desembocadura,1.78,10
+LLUTA4,-18.413824,-70.324603,Río Lluta - Desembocadura,1.61,10
+LLUTA5,-18.412960,-70.325797,Río Lluta - Desembocadura,1.67,10
+MATAQ3,-34.997417,-72.181099,Río Mataquito – Desembocadura,28.57,11
+MATAQ4,-35.016803,-72.178023,Río Mataquito – Desembocadura,52.36,11
+MATAQ6,-34.9909099,-72.182579,Río Mataquito – Desembocadura,28.23,11
+MAIPO1,-33.627184,-71.633898,SN Humedal río Maipo – Desembocadura,0.34,12
+MAIPO10,-33.616449,-71.630613,SN Humedal río Maipo – Desembocadura,1.78,12
+MAIPO11,-33.618084,-71.631124,SN Humedal río Maipo – Desembocadura,1.87,12
+MAIPO12,-33.619747,-71.631544,SN Humedal río Maipo – Desembocadura,1.65,12
+MAIPO13,-33.621414,-71.631858,SN Humedal río Maipo – Desembocadura,2.01,12
+MAIPO14,-33.620936,-71.628032,SN Humedal río Maipo – Desembocadura,4.52,12
+MAIPO15,-33.617487,-71.627127,SN Humedal río Maipo – Desembocadura,2.73,12
+MAIPO2,-33.626378,-71.632592,SN Humedal río Maipo – Desembocadura,0.80,12
+MAIPO3,-33.624036,-71.632017,SN Humedal río Maipo – Desembocadura,2.95,12
+MAIPO4,-33.621463,-71.630577,SN Humedal río Maipo – Desembocadura,2.97,12
+MAIPO5,-33.619794,-71.630302,SN Humedal río Maipo – Desembocadura,2.42,12
+MAIPO6,-33.618165,-71.629852,SN Humedal río Maipo – Desembocadura,2.78,12
+MAIPO7,-33.616539,-71.629421,SN Humedal río Maipo – Desembocadura,2.52,12
+MAIPO8,-33.614738,-71.628589,SN Humedal río Maipo – Desembocadura,3.17,12
+MAIPO9,-33.614766,-71.629923,SN Humedal río Maipo – Desembocadura,1.96,12
