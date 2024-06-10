@@ -1,3 +1,5 @@
+# PREPARACIÓN DE DATOS MSP PARA ANÁLSIS
+# Cargar paquetes
 library(dplyr)
 library(tidyr)
 library(lubridate)
@@ -237,4 +239,5 @@ MSPver <- left_join(MSPver, df.u, by = "Sampling.Unit.Name")
 df.c <- df.c %>% distinct(Sampling.Unit.Name, Date, .keep_all = TRUE)
 MSPver <- left_join(MSPver, df.c, by = c("Sampling.Unit.Name", "Date"))
 
+#producir planilla de output
 write.csv(MSPver, 'MSPver.csv', row.names = FALSE)
