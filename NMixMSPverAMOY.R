@@ -5,30 +5,20 @@ load("MSPverAMOYNM.rda")
 str(MSPverAMOYNM)
 
 
-abund.formula <- ~ scale(superficie) + scale(year) + (1 | año.s) + (1 | sitio) + (1 | SUID)
-abund.formula1 <- ~ scale(superficie) + scale(year)  + (1 | sitio) + (1 | SUID)
+abund.formula1 <- ~ scale(superficie) + scale(year) + (1 | sitio) + (1 | SUID)
 abund.formula2 <- ~  scale(year) + (1 | sitio) + (1 | SUID)
-abund.formula3 <- ~  scale(superficie) + (1 | año.s) + (1 | sitio) + (1 | SUID)
 
-abund.formula4 <- ~  scale(year) + (1 | sitio) + (1 | SUID)
-abund.formula5 <- ~  scale(year) + (1 | sitio) + (1 | SUID)
-abund.formula6 <- ~  scale(year)  + sitio + (1 | SUID)
-abund.formula7 <- ~  scale(year)  + sitio + (1 | SUID)
+det.formula1 <- ~ precipitacion + viento + (1|año) + (1 | sitio) + (1 | SUID)
+det.formula2 <- ~ precipitacion  + (1|año) + (1 | sitio) + (1 | SUID)
+det.formula3 <- ~ viento  + (1|año) + (1 | sitio) + (1 | SUID)
 
-
-det.formula <- ~ precipitacion + viento + (1|año) + (1 | sitio) + (1 | unidad)
-det.formula1 <- ~ precipitacion  + (1|año) + (1 | sitio) + (1 | unidad)
-det.formula2 <- ~ viento  + (1|año) + (1 | sitio) + (1 | unidad)
-det.formula3 <- ~ 1  + (1|año) + (1 | sitio) + (1 | unidad)
-
-det.formula4 <- ~ viento + (1 | sitio) + (1 | unidad)
-det.formula5 <- ~ precipitacion  + (1 | sitio) + (1 | unidad)
-det.formula6 <- ~ viento + (1 | sitio) + (1 | unidad)
-det.formula7 <- ~ precipitacion  + (1 | sitio) + (1 | unidad)
+det.formula4 <- ~ precipitacion + viento + (1 | sitio) + (1 | SUID)
+det.formula5 <- ~ precipitacion  + (1 | sitio) + (1 | SUID)
+det.formula6 <- ~ viento + (1 | sitio) + (1 | SUID)
 
 
 # Pair-wise distances between all sites
-dist.mat <- dist(MSPverAMOYNM4.3$coords)
+dist.mat <- dist(MSPverAMOYNM$coords)
 # Exponential covariance model
 cov.model <- 'exponential'
 # Specify list of inits
@@ -36,10 +26,10 @@ inits <- list(alpha = 0,
               beta = 0,
               kappa = 0.5,
               sigma.sq.mu = 0.5,
-              N = apply(MSPverAMOYNM4.3$y, 1, max, na.rm = TRUE), 
+              N = apply(MSPverAMOYNM$y, 1, max, na.rm = TRUE), 
               sigma.sq = 1, 
               phi = 3 / mean(dist.mat),
-              w = rep(0, nrow(MSPverAMOYNM4.3$y)))
+              w = rep(0, nrow(MSPverAMOYNM$y)))
 
 
 priors <- list(alpha.normal = list(mean = 0, var = 2.72),
@@ -62,8 +52,8 @@ n.burn <- 30000
 n.thin <- 20
 n.chains <- 3
 
-out0 <- NMix(abund.formula = abund.formula, 
-                 det.formula = det.formula, 
+out0 <- NMix(abund.formula = abund.formula1, 
+                 det.formula = det.formula1, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -93,7 +83,7 @@ save(out0, file = 'MSPverAMOYNMout0.rda')
 
 
 out1 <- NMix(abund.formula = abund.formula1, 
-                 det.formula = det.formula1, 
+                 det.formula = det.formula2, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -121,8 +111,8 @@ plot(out1, param = 'alpha', density = FALSE)
 
 save(out1, file = 'MSPverAMOYNMout1.rda')
 
-out2 <- NMix(abund.formula = abund.formula2, 
-                 det.formula = det.formula2, 
+out2 <- NMix(abund.formula = abund.formula1, 
+                 det.formula = det.formula3, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -149,8 +139,8 @@ plot(out2, param = 'alpha', density = FALSE)
 
 save(out2, file = 'MSPverAMOYNMout2.rda')
 
-out3<- NMix(abund.formula = abund.formula3, 
-                det.formula = det.formula3, 
+out3<- NMix(abund.formula = abund.formula1, 
+                det.formula = det.formula4, 
                 data = MSPverAMOYNM, 
                 inits = inits, 
                 priors = priors,
@@ -178,8 +168,8 @@ plot(out3, param = 'alpha', density = FALSE)
 
 save(out3, file = 'MSPverAMOYNMout3.rda')
 
-out4 <- NMix(abund.formula = abund.formula4, 
-                 det.formula = det.formula4, 
+out4 <- NMix(abund.formula = abund.formula1, 
+                 det.formula = det.formula5, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -206,8 +196,8 @@ plot(out4, param = 'alpha', density = FALSE)
 
 save(out4, file = 'MSPverAMOYNMout4.rda')
 
-out5 <- NMix(abund.formula = abund.formula5, 
-                 det.formula = det.formula5, 
+out5 <- NMix(abund.formula = abund.formula1, 
+                 det.formula = det.formula6, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -234,8 +224,8 @@ plot(out5, param = 'alpha', density = FALSE)
 
 save(out5, file = 'MSPverAMOYNMout5.rda')
 
-out6 <- NMix(abund.formula = abund.formula6, 
-                 det.formula = det.formula6, 
+out6 <- NMix(abund.formula = abund.formula2, 
+                 det.formula = det.formula1, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -249,6 +239,7 @@ out6 <- NMix(abund.formula = abund.formula6,
                  n.burn = n.burn,
                  n.thin = n.thin, 
                  n.chains = n.chains)
+
 summary(out6)
 ppc.out.sp6 <- ppcAbund(out6, fit.stat = 'freeman-tukey', group = 1)
 summary(ppc.out.sp6)
@@ -262,8 +253,8 @@ plot(out6, param = 'alpha', density = FALSE)
 
 save(out6, file = 'MSPverAMOYNMout6.rda')
 
-out7 <- NMix(abund.formula = abund.formula7, 
-                 det.formula = det.formula7, 
+out7 <- NMix(abund.formula = abund.formula2, 
+                 det.formula = det.formula2, 
                  data = MSPverAMOYNM, 
                  inits = inits, 
                  priors = priors,
@@ -291,7 +282,135 @@ plot(out7, param = 'alpha', density = FALSE)
 save(out7, file = 'MSPverAMOYNMout7.rda')
 
 
+out8 <- NMix(abund.formula = abund.formula2, 
+             det.formula = det.formula3, 
+             data = MSPverAMOYNM, 
+             inits = inits, 
+             priors = priors,
+             n.batch = n.batch,
+             batch.length = batch.length, 
+             tuning = tuning, 
+             n.omp.threads = 1,
+             n.report = 400,
+             family = 'NB',
+             verbose = TRUE,
+             n.burn = n.burn,
+             n.thin = n.thin, 
+             n.chains = n.chains)
+summary(out8)
+ppc.out.sp8 <- ppcAbund(out8, fit.stat = 'freeman-tukey', group = 1)
+summary(ppc.out.sp8)
+
+# Abundance regression coefficients
+plot(out8, param = 'beta', density = FALSE)
+#plot(out8, param = 'beta.star', density = FALSE)
+# Detection regression coefficients
+plot(out8, param = 'alpha', density = FALSE)
+#plot(out8, param = 'alpha.star', density = FALSE)
+
+save(out8, file = 'MSPverAMOYNMout8.rda')
+
+
+out9 <- NMix(abund.formula = abund.formula2, 
+             det.formula = det.formula4, 
+             data = MSPverAMOYNM, 
+             inits = inits, 
+             priors = priors,
+             n.batch = n.batch,
+             batch.length = batch.length, 
+             tuning = tuning, 
+             n.omp.threads = 1,
+             n.report = 400,
+             family = 'NB',
+             verbose = TRUE,
+             n.burn = n.burn,
+             n.thin = n.thin, 
+             n.chains = n.chains)
+summary(out9)
+ppc.out.sp9 <- ppcAbund(out9, fit.stat = 'freeman-tukey', group = 1)
+summary(ppc.out.sp9)
+
+# Abundance regression coefficients
+plot(out9, param = 'beta', density = FALSE)
+#plot(out9, param = 'beta.star', density = FALSE)
+# Detection regression coefficients
+plot(out9, param = 'alpha', density = FALSE)
+#plot(out9, param = 'alpha.star', density = FALSE)
+
+save(out9, file = 'MSPverAMOYNMout9.rda')
+
+
+out10 <- NMix(abund.formula = abund.formula2, 
+             det.formula = det.formula5, 
+             data = MSPverAMOYNM, 
+             inits = inits, 
+             priors = priors,
+             n.batch = n.batch,
+             batch.length = batch.length, 
+             tuning = tuning, 
+             n.omp.threads = 1,
+             n.report = 400,
+             family = 'NB',
+             verbose = TRUE,
+             n.burn = n.burn,
+             n.thin = n.thin, 
+             n.chains = n.chains)
+summary(out10)
+ppc.out.sp10 <- ppcAbund(out10, fit.stat = 'freeman-tukey', group = 1)
+summary(ppc.out.sp10)
+
+# Abundance regression coefficients
+plot(out10, param = 'beta', density = FALSE)
+#plot(out10, param = 'beta.star', density = FALSE)
+# Detection regression coefficients
+plot(out10, param = 'alpha', density = FALSE)
+#plot(out10, param = 'alpha.star', density = FALSE)
+
+save(out10, file = 'MSPverAMOYNMout10.rda')
+
+
+out11 <- NMix(abund.formula = abund.formula2, 
+             det.formula = det.formula6, 
+             data = MSPverAMOYNM, 
+             inits = inits, 
+             priors = priors,
+             n.batch = n.batch,
+             batch.length = batch.length, 
+             tuning = tuning, 
+             n.omp.threads = 1,
+             n.report = 400,
+             family = 'NB',
+             verbose = TRUE,
+             n.burn = n.burn,
+             n.thin = n.thin, 
+             n.chains = n.chains)
+summary(out11)
+ppc.out.sp11 <- ppcAbund(out11, fit.stat = 'freeman-tukey', group = 1)
+summary(ppc.out.sp11)
+
+# Abundance regression coefficients
+plot(out11, param = 'beta', density = FALSE)
+#plot(out11, param = 'beta.star', density = FALSE)
+# Detection regression coefficients
+plot(out11, param = 'alpha', density = FALSE)
+#plot(out11, param = 'alpha.star', density = FALSE)
+
+save(out11, file = 'MSPverAMOYNMout11.rda')
 #------------------WAIC----------------------------
+
+
+load("MSPverAMOYNMout0.rda")
+load("MSPverAMOYNMout1.rda")
+load("MSPverAMOYNMout2.rda")
+load("MSPverAMOYNMout3.rda")
+load("MSPverAMOYNMout4.rda")
+load("MSPverAMOYNMout5.rda")
+load("MSPverAMOYNMout6.rda")
+load("MSPverAMOYNMout7.rda")
+load("MSPverAMOYNMout8.rda")
+load("MSPverAMOYNMout9.rda")
+load("MSPverAMOYNMout10.rda")
+load("MSPverAMOYNMout11.rda")
 
 waicAbund(out0)
 waicAbund(out1)
@@ -301,5 +420,8 @@ waicAbund(out4)
 waicAbund(out5)
 waicAbund(out6)
 waicAbund(out7)
-
+waicAbund(out8)
+waicAbund(out9)
+waicAbund(out10)
+waicAbund(out11)
 
