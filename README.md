@@ -1,4 +1,4 @@
-# Tutorial de análisis de abundancia utilizando datos del [Migratory Shorebird Project](https://migratoryshorebirdproject.org) (MSP)
+# Tutorial para el análisis de abundancia de aves playeras utilizando datos del [Migratory Shorebird Project](https://migratoryshorebirdproject.org) (MSP)
 
 El Migratory Shorebird Project...
 Este repositorio tiene como objetivo describir un procedimiento para obtener tendencias en abundancia a nivel de especies, sitios y nacional, utilizando datos colectados en el marco del esquema de monitoreo MSP. 
