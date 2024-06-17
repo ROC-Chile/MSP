@@ -8,4 +8,5 @@ El código detalla los pasos para utilizar el paquete de R SpAbundance de Doser 
 - Gráficar los Resultados
 
 Este tutorial fue desarrollado por la Red de Observadores de Aves y Vida Silvestre de Chile (ROC) en el marco de un proyecto MSP+ financiado por Point Blue Conservation.
-https://github.com/ROC-Chile/MSP/blob/main/roc_logo_horizontal.png
+
+![What is this](roc_logo_horizontal.png)![Point blue](Point_Blue_logo.png)
