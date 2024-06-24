@@ -18,4 +18,4 @@ Si tienes preguntas puedes contactarte con nosotros enviando un correo a [Marion
 
 Este tutorial fue desarrollado por la Red de Observadores de Aves y Vida Silvestre de Chile (ROC) en el marco de un proyecto MSP+ financiado por Point Blue Conservation.
 
-![ROC](roc_logo_horizontal.png)![Point_Blue](Point_Blue_logo.png)
+![ROC](roc_logo_horizontal_Small.jpeg)      ![Point_Blue](Point_Blue_logo.jpeg)
