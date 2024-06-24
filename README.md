@@ -5,10 +5,10 @@ El **Migratory Shorebird** Project busca potenciar las capacidades locales para 
 El tutorial está dividido en tres componentes de código que detallan los pasos a seguir utilizando el paquete **SpAbundance** de [Doser et al.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.14332). Este paquete trabaja en un marco de estadística Bayesiana, pero drásticamente simplifica su implementación al adoptar el syntax ampliamente utilizado por paquetes como **lmer**. El uso de esta herramienta requiere un conocimiento moderado de R y el código está extensamente anotado.
 
 ## Preparación de Datos
-Empezar por el archivo xxx que detalla cómo realizar las preparaciones pre-análisis de los datos después de ser descargados desde CADC. En este caso proveemos un ejemplo de datos de Chile en el archivo xxx.
+Empezar por el archivo [PrepDataMSP+.R](https://github.com/ROC-Chile/MSP/blob/main/PrepDataMSP%2B.R) que detalla cómo realizar las preparaciones pre-análisis de los datos después de ser descargados desde CADC. En este caso proveemos un ejemplo de datos de Chile en el archivo [DatosMSPnov2023.csv](https://github.com/ROC-Chile/MSP/blob/main/DatosMSPnov2023.csv).
 
 ## Análisis de Abundancia
-En el archivo xxx se de detalla la construcción del modelo en spAbundance.
+En el archivo [NMixMSPverAMOY.R](https://github.com/ROC-Chile/MSP/blob/main/NMixMSPverAMOY.R) se de detalla la construcción del modelo en spAbundance.
 
 ## Gráficar los Resultados
 Por último, en el archivo xxx se encuentra el código necesario para producir gráficos por especies, a nivel de sitios y a nivel nacional de todas las especies.
