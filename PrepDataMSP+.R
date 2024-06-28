@@ -486,12 +486,13 @@ scaled_coords_df <- as.matrix(scaled_coords_df)
 
 #Base de datos NMix
 # Crear la lista de 4 objetos
-MSPverAMOYNM <- list(y = y,
+MSPverAMOY <- list(y = y,
                      abund.covs = abund.covs,
                      det.covs = det.covs,
                      coords = scaled_coords_df)
 
 # Mostrar la estructura actualizada de la lista
-str(MSPverAMOYNM)
+str(MSPverAMOY)
 
-save(MSPverAMOYNM, file = 'MSPverAMOYNM.rda')
+save(MSPverAMOY, file = 'MSPverAMOY.rda')
+

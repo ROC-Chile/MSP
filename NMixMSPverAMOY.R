@@ -1,8 +1,8 @@
 library(spAbundance)
 library(ggplot2)
 
-load("MSPverAMOYNM.rda")
-str(MSPverAMOYNM)
+load("MSPverAMOY.rda")
+str(MSPverAMOY)
 
 
 abund.formula1 <- ~ scale(superficie) + scale(year) + (1 | sitio) + (1 | SUID)
@@ -18,7 +18,7 @@ det.formula6 <- ~ viento + (1 | sitio) + (1 | SUID)
 
 
 # Pair-wise distances between all sites
-dist.mat <- dist(MSPverAMOYNM$coords)
+dist.mat <- dist(MSPverAMOY$coords)
 # Exponential covariance model
 cov.model <- 'exponential'
 # Specify list of inits
@@ -26,10 +26,10 @@ inits <- list(alpha = 0,
               beta = 0,
               kappa = 0.5,
               sigma.sq.mu = 0.5,
-              N = apply(MSPverAMOYNM$y, 1, max, na.rm = TRUE), 
+              N = apply(MSPverAMOY$y, 1, max, na.rm = TRUE), 
               sigma.sq = 1, 
               phi = 3 / mean(dist.mat),
-              w = rep(0, nrow(MSPverAMOYNM$y)))
+              w = rep(0, nrow(MSPverAMOY$y)))
 
 
 priors <- list(alpha.normal = list(mean = 0, var = 2.72),
@@ -54,7 +54,7 @@ n.chains <- 3
 
 out0 <- NMix(abund.formula = abund.formula1, 
                  det.formula = det.formula1, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -79,12 +79,12 @@ plot(out0, param = 'beta', density = FALSE)
 plot(out0, param = 'alpha', density = FALSE)
 #plot(out0, param = 'alpha.star', density = FALSE)
 
-save(out0, file = 'MSPverAMOYNMout0.rda')
+save(out0, file = 'MSPverAMOYout0.rda')
 
 
 out1 <- NMix(abund.formula = abund.formula1, 
                  det.formula = det.formula2, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -109,11 +109,11 @@ plot(out1, param = 'beta', density = FALSE)
 plot(out1, param = 'alpha', density = FALSE)
 #plot(out1, param = 'alpha.star', density = FALSE)
 
-save(out1, file = 'MSPverAMOYNMout1.rda')
+save(out1, file = 'MSPverAMOYout1.rda')
 
 out2 <- NMix(abund.formula = abund.formula1, 
                  det.formula = det.formula3, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -137,11 +137,11 @@ plot(out2, param = 'beta', density = FALSE)
 plot(out2, param = 'alpha', density = FALSE)
 #plot(out2, param = 'alpha.star', density = FALSE)
 
-save(out2, file = 'MSPverAMOYNMout2.rda')
+save(out2, file = 'MSPverAMOYout2.rda')
 
 out3<- NMix(abund.formula = abund.formula1, 
                 det.formula = det.formula4, 
-                data = MSPverAMOYNM, 
+                data = MSPverAMOY, 
                 inits = inits, 
                 priors = priors,
                 n.batch = n.batch,
@@ -166,11 +166,11 @@ plot(out3, param = 'beta', density = FALSE)
 plot(out3, param = 'alpha', density = FALSE)
 #plot(out3, param = 'alpha.star', density = FALSE)
 
-save(out3, file = 'MSPverAMOYNMout3.rda')
+save(out3, file = 'MSPverAMOYout3.rda')
 
 out4 <- NMix(abund.formula = abund.formula1, 
                  det.formula = det.formula5, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -194,11 +194,11 @@ plot(out4, param = 'beta', density = FALSE)
 plot(out4, param = 'alpha', density = FALSE)
 #plot(out4, param = 'alpha.star', density = FALSE)
 
-save(out4, file = 'MSPverAMOYNMout4.rda')
+save(out4, file = 'MSPverAMOYout4.rda')
 
 out5 <- NMix(abund.formula = abund.formula1, 
                  det.formula = det.formula6, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -222,11 +222,11 @@ plot(out5, param = 'beta', density = FALSE)
 plot(out5, param = 'alpha', density = FALSE)
 #plot(out5, param = 'alpha.star', density = FALSE)
 
-save(out5, file = 'MSPverAMOYNMout5.rda')
+save(out5, file = 'MSPverAMOYout5.rda')
 
 out6 <- NMix(abund.formula = abund.formula2, 
                  det.formula = det.formula1, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -251,11 +251,11 @@ plot(out6, param = 'beta', density = FALSE)
 plot(out6, param = 'alpha', density = FALSE)
 #plot(out6, param = 'alpha.star', density = FALSE)
 
-save(out6, file = 'MSPverAMOYNMout6.rda')
+save(out6, file = 'MSPverAMOYout6.rda')
 
 out7 <- NMix(abund.formula = abund.formula2, 
                  det.formula = det.formula2, 
-                 data = MSPverAMOYNM, 
+                 data = MSPverAMOY, 
                  inits = inits, 
                  priors = priors,
                  n.batch = n.batch,
@@ -279,12 +279,12 @@ plot(out7, param = 'beta', density = FALSE)
 plot(out7, param = 'alpha', density = FALSE)
 #plot(out7, param = 'alpha.star', density = FALSE)
 
-save(out7, file = 'MSPverAMOYNMout7.rda')
+save(out7, file = 'MSPverAMOYout7.rda')
 
 
 out8 <- NMix(abund.formula = abund.formula2, 
              det.formula = det.formula3, 
-             data = MSPverAMOYNM, 
+             data = MSPverAMOY, 
              inits = inits, 
              priors = priors,
              n.batch = n.batch,
@@ -308,12 +308,12 @@ plot(out8, param = 'beta', density = FALSE)
 plot(out8, param = 'alpha', density = FALSE)
 #plot(out8, param = 'alpha.star', density = FALSE)
 
-save(out8, file = 'MSPverAMOYNMout8.rda')
+save(out8, file = 'MSPverAMOYout8.rda')
 
 
 out9 <- NMix(abund.formula = abund.formula2, 
              det.formula = det.formula4, 
-             data = MSPverAMOYNM, 
+             data = MSPverAMOY, 
              inits = inits, 
              priors = priors,
              n.batch = n.batch,
@@ -337,12 +337,12 @@ plot(out9, param = 'beta', density = FALSE)
 plot(out9, param = 'alpha', density = FALSE)
 #plot(out9, param = 'alpha.star', density = FALSE)
 
-save(out9, file = 'MSPverAMOYNMout9.rda')
+save(out9, file = 'MSPverAMOYout9.rda')
 
 
 out10 <- NMix(abund.formula = abund.formula2, 
              det.formula = det.formula5, 
-             data = MSPverAMOYNM, 
+             data = MSPverAMOY, 
              inits = inits, 
              priors = priors,
              n.batch = n.batch,
@@ -366,12 +366,12 @@ plot(out10, param = 'beta', density = FALSE)
 plot(out10, param = 'alpha', density = FALSE)
 #plot(out10, param = 'alpha.star', density = FALSE)
 
-save(out10, file = 'MSPverAMOYNMout10.rda')
+save(out10, file = 'MSPverAMOYout10.rda')
 
 
 out11 <- NMix(abund.formula = abund.formula2, 
              det.formula = det.formula6, 
-             data = MSPverAMOYNM, 
+             data = MSPverAMOY, 
              inits = inits, 
              priors = priors,
              n.batch = n.batch,
@@ -395,22 +395,22 @@ plot(out11, param = 'beta', density = FALSE)
 plot(out11, param = 'alpha', density = FALSE)
 #plot(out11, param = 'alpha.star', density = FALSE)
 
-save(out11, file = 'MSPverAMOYNMout11.rda')
+save(out11, file = 'MSPverAMOYout11.rda')
 #------------------WAIC----------------------------
 
 
-load("MSPverAMOYNMout0.rda")
-load("MSPverAMOYNMout1.rda")
-load("MSPverAMOYNMout2.rda")
-load("MSPverAMOYNMout3.rda")
-load("MSPverAMOYNMout4.rda")
-load("MSPverAMOYNMout5.rda")
-load("MSPverAMOYNMout6.rda")
-load("MSPverAMOYNMout7.rda")
-load("MSPverAMOYNMout8.rda")
-load("MSPverAMOYNMout9.rda")
-load("MSPverAMOYNMout10.rda")
-load("MSPverAMOYNMout11.rda")
+load("MSPverAMOYout0.rda")
+load("MSPverAMOYout1.rda")
+load("MSPverAMOYout2.rda")
+load("MSPverAMOYout3.rda")
+load("MSPverAMOYout4.rda")
+load("MSPverAMOYout5.rda")
+load("MSPverAMOYout6.rda")
+load("MSPverAMOYout7.rda")
+load("MSPverAMOYout8.rda")
+load("MSPverAMOYout9.rda")
+load("MSPverAMOYout10.rda")
+load("MSPverAMOYout11.rda")
 
 waicAbund(out0)
 waicAbund(out1)
