@@ -11,7 +11,7 @@ Empezar por el archivo [PrepDataMSP+.R](https://github.com/ROC-Chile/MSP/blob/ma
 En el archivo [NMixMSPverAMOY.R](https://github.com/ROC-Chile/MSP/blob/main/NMixMSPverAMOY.R) se de detalla la construcción del modelo en spAbundance.
 
 ## Gráficar los Resultados
-Por último, en el archivo xxx se encuentra el código necesario para producir gráficos por especies, a nivel de sitios y a nivel nacional de todas las especies.
+Por último, en el archivo [SummaryNacMSPverAMOY](https://github.com/ROC-Chile/MSP/blob/main/SummaryNacMSPverAMOY.R) se encuentra el código necesario para producir gráficos por especies, a nivel de sitios y a nivel nacional de todas las especies.
 
 ## 
 Si tienes preguntas puedes contactarte con nosotros enviando un correo a [Marion Díaz](mariondiaz@redobservadores.cl) o [Erik Sandvig](eriksandvig@redobservadores.cl) del Programa de Monitoreo de la ROC.
