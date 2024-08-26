@@ -17,5 +17,3 @@ Por último, en el archivo [SummaryNacMSPverAMOY](https://github.com/ROC-Chile/M
 Si tienes preguntas puedes contactarte con nosotros enviando un correo a [Marion Díaz](mariondiaz@redobservadores.cl) o [Erik Sandvig](eriksandvig@redobservadores.cl) del Programa de Monitoreo de la ROC.
 
 Este tutorial fue desarrollado por la Red de Observadores de Aves y Vida Silvestre de Chile (ROC) en el marco de un proyecto MSP+ financiado por Point Blue Conservation.
-
-![ROC](roc_logo_horizontal_Small.jpeg)      ![Point_Blue](Point_Blue_logo.jpeg)
